@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="TEAM KKLE — пример страницы состава и профиля игрока.">
+  <title>TEAM KKLE — Состав</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body data-page="roster">
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="TEAM KKLE — главная"><span class="brand-glyph" aria-hidden="true">K/</span><span class="brand-text">KKLE<small>TEAM / DOTA 2</small></span></a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="./index.html" data-i18n="navHome">Главная</a>
+      <a href="./design.html" data-i18n="navDesign">Дизайн</a>
+      <a href="./roster.html" aria-current="page" data-i18n="navRoster">Состав</a>
+      <a href="./about.html" data-i18n="navAbout">О команде</a>
+      <a href="./partners.html" data-i18n="navPartners">Партнёры</a>
+    </nav>
+    <div class="header-end"><div class="language-switch" role="group" aria-label="Language / Язык"><button type="button" data-lang="ru" aria-pressed="true">RU</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div>
+  </header>
+
+  <main class="inner-page">
+    <section class="roster-section section-space" aria-labelledby="roster-title">
+      <div class="wrap">
+        <div class="page-kicker"><span>02 / ROSTER</span><span>FIVE SLOTS / ONE TEAM</span></div>
+        <div class="section-header roster-heading"><div><p class="eyebrow" data-i18n="rosterEyebrow">СОСТАВ</p><h1 id="roster-title" class="page-title" data-i18n="rosterTitle">Люди за тегом.</h1></div><p data-i18n="rosterIntro">У каждого игрока будет свой профиль: история, роль и позиция, любимые герои, игровые факты и соцсети. Сейчас здесь нейтральные слоты — реальные имена и фотографии появятся вместе с командой.</p></div>
+        <div class="roster-grid" aria-label="Пять слотов для игроков">
+          <button type="button" class="player-slot is-selected" data-player="01" data-role="CARRY" aria-pressed="true"><span>01 / CARRY</span><b aria-hidden="true">?</b><strong>YOUR PLAYER</strong><small data-i18n="yourTag">YOUR TAG / ВАШ НИК</small></button>
+          <button type="button" class="player-slot" data-player="02" data-role="MID" aria-pressed="false"><span>02 / MID</span><b aria-hidden="true">?</b><strong>YOUR PLAYER</strong><small data-i18n="yourTag">YOUR TAG / ВАШ НИК</small></button>
+          <button type="button" class="player-slot" data-player="03" data-role="OFFLANE" aria-pressed="false"><span>03 / OFFLANE</span><b aria-hidden="true">?</b><strong>YOUR PLAYER</strong><small data-i18n="yourTag">YOUR TAG / ВАШ НИК</small></button>
+          <button type="button" class="player-slot" data-player="04" data-role="SUPPORT" aria-pressed="false"><span>04 / SUPPORT</span><b aria-hidden="true">?</b><strong>YOUR PLAYER</strong><small data-i18n="yourTag">YOUR TAG / ВАШ НИК</small></button>
+          <button type="button" class="player-slot" data-player="05" data-role="HARD SUPPORT" aria-pressed="false"><span>05 / HARD SUPPORT</span><b aria-hidden="true">?</b><strong>YOUR PLAYER</strong><small data-i18n="yourTag">YOUR TAG / ВАШ НИК</small></button>
+        </div>
+        <div class="player-profile" aria-live="polite">
+          <div class="profile-ident"><span id="profile-index">PLAYER FILE / 01</span><strong>YOUR PLAYER</strong><small id="profile-role">POSITION / CARRY</small></div>
+          <div class="profile-details"><div><span data-i18n="profileStory">ИСТОРИЯ</span><strong data-i18n="profilePlaceholder">Личный путь игрока</strong></div><div><span data-i18n="profileHeroes">ЛЮБИМЫЕ ГЕРОИ</span><strong data-i18n="profileHeroPlaceholder">Герои и стиль игры</strong></div><div><span data-i18n="profileSocial">СОЦСЕТИ</span><strong data-i18n="profileSocialPlaceholder">Ссылки игрока</strong></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><div><span class="footer-eyebrow" data-i18n="footerEyebrow">ЕСТЬ КОМАНДА И ЗАДАЧА?</span><strong class="footer-brand">kkellee<span>.</span></strong><p data-i18n="footerDisclosure">TEAM KKLE показывает мой подход, а не готовое решение. Расскажите о вашей команде — соберём визуал под её характер, аудиторию и задачи.</p></div><div class="footer-links"><a href="mailto:kelleonly@mail.ru">kelleonly@mail.ru ↗</a><a href="https://t.me/whereyoynothere" target="_blank" rel="noopener noreferrer">Telegram / @whereyoynothere ↗</a></div></div><div class="wrap footer-bottom">© 2026 kkellee</div></footer>
+</body>
+</html>

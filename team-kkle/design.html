@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#151515">
+  <meta name="description" content="TEAM KKLE — примеры оформления матчей, драфта и истории игрока.">
+  <title>TEAM KKLE — Дизайн</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js" defer></script>
+</head>
+<body data-page="design">
+  <header class="site-header">
+    <a class="brand" href="./index.html" aria-label="TEAM KKLE — главная"><span class="brand-glyph" aria-hidden="true">K/</span><span class="brand-text">KKLE<small>TEAM / DOTA 2</small></span></a>
+    <nav class="main-nav" aria-label="Основная навигация">
+      <a href="./index.html" data-i18n="navHome">Главная</a>
+      <a href="./design.html" aria-current="page" data-i18n="navDesign">Дизайн</a>
+      <a href="./roster.html" data-i18n="navRoster">Состав</a>
+      <a href="./about.html" data-i18n="navAbout">О команде</a>
+      <a href="./partners.html" data-i18n="navPartners">Партнёры</a>
+    </nav>
+    <div class="header-end"><div class="language-switch" role="group" aria-label="Language / Язык"><button type="button" data-lang="ru" aria-pressed="true">RU</button><button type="button" data-lang="en" aria-pressed="false">EN</button></div></div>
+  </header>
+
+  <main class="inner-page">
+    <section class="graphics-section section-space" aria-labelledby="graphics-title">
+      <div class="wrap">
+        <div class="page-kicker"><span>01 / DESIGN</span><span>TEAM KKLE / DOTA 2</span></div>
+        <div class="section-header">
+          <div><p class="eyebrow" data-i18n="designEyebrow">ВИЗУАЛЬНЫЕ ФОРМАТЫ</p><h1 id="graphics-title" class="page-title" data-i18n="graphicsTitle">Дизайн для каждого момента.</h1></div>
+          <p data-i18n="graphicsIntro">Четыре примера подачи: анонс, итог матча, драфт и история игрока. Это не фиксированный пакет — под реальную команду содержание и визуальный язык создаются отдельно.</p>
+        </div>
+        <div class="graphics-workspace">
+          <div class="graphics-tabs" role="tablist" aria-label="Варианты дизайна">
+            <button class="graphic-tab is-active" type="button" role="tab" id="tab-match" aria-controls="panel-match" aria-selected="true" data-frame="match"><span>01 / PRE-MATCH</span><strong data-i18n="tabMatch">Анонс матча</strong><span aria-hidden="true">↗</span></button>
+            <button class="graphic-tab" type="button" role="tab" id="tab-result" aria-controls="panel-result" aria-selected="false" data-frame="result"><span>02 / POST-MATCH</span><strong data-i18n="tabResult">Результат</strong><span aria-hidden="true">↗</span></button>
+            <button class="graphic-tab" type="button" role="tab" id="tab-draft" aria-controls="panel-draft" aria-selected="false" data-frame="draft"><span>03 / DRAFT</span><strong data-i18n="tabDraft">Пики и баны</strong><span aria-hidden="true">↗</span></button>
+            <button class="graphic-tab" type="button" role="tab" id="tab-fact" aria-controls="panel-fact" aria-selected="false" data-frame="fact"><span>04 / PLAYER STORY</span><strong data-i18n="tabFact">Факт об игроке</strong><span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="graphics-stage">
+            <div class="artboard announcement" id="panel-match" role="tabpanel" aria-labelledby="tab-match" data-panel="match">
+              <div class="artboard-top"><span>KKLE / DOTA 2</span><span data-i18n="demoGraphic">ДЕМО-МАКЕТ / 01</span></div>
+              <div class="announcement-main"><div class="match-type"><span data-i18n="matchDay">МАТЧ / СЕГОДНЯ</span><strong>MATCH<br>DAY<span>.</span></strong></div><div class="match-meta"><span data-i18n="matchSeries">СЕРИЯ</span><strong>BO3</strong><span data-i18n="matchStage">ГРУППОВОЙ ЭТАП</span></div></div>
+              <div class="versus-band"><div><small data-i18n="homeSide">ВАША СТОРОНА</small><strong>YOUR<br>TEAM</strong><span>YOUR TAG / ?</span></div><b>VS</b><div><small data-i18n="opponentSide">СОПЕРНИК</small><strong>OPPONENT</strong><span>TEAM TAG / ?</span></div></div>
+              <div class="artboard-bottom"><span data-i18n="demoEvent">ТУРНИР / ДЕМО</span><span>19:00 MSK <i>•</i> 18.10.2026</span><span>BO3 / ONLINE</span></div>
+            </div>
+            <div class="artboard result" id="panel-result" role="tabpanel" aria-labelledby="tab-result" data-panel="result" hidden>
+              <div class="result-top"><span>KKLE / DOTA 2</span><span data-i18n="resultDemo">ДЕМО-РЕЗУЛЬТАТ / 02</span></div>
+              <div class="result-stamp" data-i18n="resultWin">ПОБЕДА</div>
+              <div class="result-content"><div class="result-title"><span data-i18n="resultSeries">СЕРИЯ ЗА НАМИ</span><strong>WIN<span>.</span></strong></div><div class="score-grid"><div><small data-i18n="homeSide">ВАША СТОРОНА</small><strong>YOUR TEAM</strong><span>YOUR TAG / ?</span></div><div class="score"><b>2</b><em>:</em><b>0</b></div><div><small data-i18n="opponentSide">СОПЕРНИК</small><strong>OPPONENT</strong><span>TEAM TAG / ?</span></div></div></div>
+              <div class="result-bottom"><span data-i18n="demoEvent">ТУРНИР / ДЕМО</span><span>BO3 · ONLINE</span><span data-i18n="notRealResult">НЕ РЕАЛЬНЫЙ РЕЗУЛЬТАТ</span></div>
+            </div>
+            <div class="artboard draft" id="panel-draft" role="tabpanel" aria-labelledby="tab-draft" data-panel="draft" hidden>
+              <div class="draft-mast"><span>KKLE / DOTA 2</span><span>03 / DRAFT BOARD</span><span>BO3 · MAP 01</span></div>
+              <div class="draft-heading"><strong>DRAFT<span>/</span></strong><div><span data-i18n="draftSample">ПРИМЕР ПИКА И БАНА</span><b>YOUR TEAM <i>VS</i> OPPONENT</b></div></div>
+              <div class="draft-team-line"><strong>YOUR TEAM</strong><span>RADIANT / 01</span></div>
+              <div class="draft-picks"><div class="draft-hero"><b aria-hidden="true">?</b><span>01 / PICK</span></div><div class="draft-hero"><b aria-hidden="true">?</b><span>02 / PICK</span></div><div class="draft-hero"><b aria-hidden="true">?</b><span>03 / PICK</span></div><div class="draft-hero"><b aria-hidden="true">?</b><span>04 / PICK</span></div><div class="draft-hero"><b aria-hidden="true">?</b><span>05 / PICK</span></div></div>
+              <div class="draft-ban-line"><b>BANS</b><span>01 / ?</span><span>02 / ?</span><span>03 / ?</span><span>04 / ?</span><span>05 / ?</span></div>
+              <div class="draft-team-line opponent"><strong>OPPONENT</strong><span>DIRE / 02</span></div>
+              <div class="draft-picks"><div class="draft-hero"><b aria-hidden="true">?</b><span>01 / PICK</span></div><div class="draft-hero"><b aria-hidden="true">?</b><span>02 / PICK</span></div><div class="draft-hero"><b aria-hidden="true">?</b><span>03 / PICK</span></div><div class="draft-hero"><b aria-hidden="true">?</b><span>04 / PICK</span></div><div class="draft-hero"><b aria-hidden="true">?</b><span>05 / PICK</span></div></div>
+              <div class="draft-ban-line"><b>BANS</b><span>01 / ?</span><span>02 / ?</span><span>03 / ?</span><span>04 / ?</span><span>05 / ?</span></div>
+              <div class="draft-foot"><span>TEAM KKLE / YOUR TAG</span><span data-i18n="draftFooter">ПИКИ И БАНЫ — ПОЛЯ ПОД ВАШ МАТЧ</span></div>
+            </div>
+            <div class="artboard fact" id="panel-fact" role="tabpanel" aria-labelledby="tab-fact" data-panel="fact" hidden>
+              <div class="fact-top"><span>KKLE / PLAYER STORY</span><span>04 / PERSONA</span></div>
+              <div class="fact-left"><span>POSITION / 01</span><b aria-hidden="true">?</b><strong>YOUR<br>PLAYER</strong><small>YOUR TAG / CARRY</small></div>
+              <div class="fact-right"><span data-i18n="factLabel">ФАКТ ИГРОКА / ПРИМЕР</span><h2 data-i18n="factHeadline">ИГРАЕТ НЕ ПО СЦЕНАРИЮ.</h2><p data-i18n="factBody">Здесь может быть личный факт или момент, который болельщики будут помнить. Историю, цифры и детали заменим на реальные — чтобы аудитория запомнила человека, а не только ник.</p><div class="fact-heroes"><span>HERO POOL</span><strong>01 / ?</strong><strong>02 / ?</strong><strong>03 / ?</strong></div></div>
+              <div class="fact-bottom"><span>TEAM KKLE / YOUR TEAM</span><span data-i18n="factDemo">ПРИМЕР ПОДАЧИ / ДАННЫЕ ЗАМЕНЯЮТСЯ</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><div><span class="footer-eyebrow" data-i18n="footerEyebrow">ЕСТЬ КОМАНДА И ЗАДАЧА?</span><strong class="footer-brand">kkellee<span>.</span></strong><p data-i18n="footerDisclosure">TEAM KKLE показывает мой подход, а не готовое решение. Расскажите о вашей команде — соберём визуал под её характер, аудиторию и задачи.</p></div><div class="footer-links"><a href="mailto:kelleonly@mail.ru">kelleonly@mail.ru ↗</a><a href="https://t.me/whereyoynothere" target="_blank" rel="noopener noreferrer">Telegram / @whereyoynothere ↗</a></div></div><div class="wrap footer-bottom">© 2026 kkellee</div></footer>
+</body>
+</html>

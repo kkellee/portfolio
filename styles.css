@@ -195,6 +195,13 @@ a.work-card:hover { border-color: var(--accent); transform: translateY(-5px); bo
   .footer-links a { font-size: clamp(25px, 7vw, 38px); }
   .footer-bottom { flex-direction: column; align-items: flex-start; justify-content: flex-end; gap: 7px; padding: 30px 70px 0 0; font-size: 12px; }
 }
+@media (max-width: 850px) {
+  .site-header { display: grid; grid-template-columns: 1fr; gap: 8px; height: auto; padding: 10px 14px; border-radius: 8px; }
+  .site-header .brand { grid-row: 1; }
+  .site-header nav { grid-row: 2; width: 100%; min-width: 0; margin: 0; padding: 6px 0 8px; gap: 22px; overflow-x: auto; white-space: nowrap; scrollbar-width: thin; }
+  .site-header nav a { flex: none; }
+  .header-contact { display: none; }
+}
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .work-card, .site-reference-card, .work-art img { transition: none; }
