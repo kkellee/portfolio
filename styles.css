@@ -53,8 +53,8 @@ nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: 
 .work-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 18px; }
 .work-card-team { grid-column: 1 / -1; }
 .work-card-team .work-art { aspect-ratio: 24 / 7; }
-.art-team { display: flex; flex-direction: column; justify-content: space-between; padding: clamp(22px, 4vw, 54px); background: radial-gradient(circle at 17% 80%, rgba(217, 37, 27, .65), transparent 38%), repeating-linear-gradient(125deg, transparent 0 27px, rgba(255,255,255,.035) 28px 29px), #111; color: #fff; }
-.art-team strong { font-size: clamp(76px, 15vw, 190px); font-weight: 1000; line-height: .75; }
+.art-team { display: flex; flex-direction: column; justify-content: space-between; container-type: inline-size; padding: clamp(22px, 4vw, 54px); background: radial-gradient(circle at 17% 80%, rgba(217, 37, 27, .65), transparent 38%), repeating-linear-gradient(125deg, transparent 0 27px, rgba(255,255,255,.035) 28px 29px), #111; color: #fff; }
+.art-team strong { font-size: clamp(58px, 19cqw, 190px); font-weight: 1000; line-height: .75; white-space: nowrap; }
 .art-team strong span { color: #ed4336; }
 .team-preview-label, .team-preview-bottom { font-size: 12px; font-weight: 850; }
 .team-preview-bottom { align-self: flex-end; }
