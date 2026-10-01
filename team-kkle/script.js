@@ -1,6 +1,6 @@
 const copy = {
   ru: {
-    navHome: 'Главная', navDesign: 'Дизайн', navRoster: 'Состав', navAbout: 'О команде', navPartners: 'Партнёры',
+    navHome: 'Главная', navDesign: 'Дизайн', navRoster: 'Состав', navAbout: 'О команде', navPartners: 'Партнёры', backPortfolio: '← Портфолио',
     heroPre: 'Команда начинается с характера.', heroSummary: 'Матч, состав, драфт и история игрока — один узнаваемый голос команды.', viewDesign: 'Смотреть дизайн', heroDisclaimer: 'Демонстрация навыков / развитие под конкретную команду',
     noticeLabel: 'ДЕМО-ПРОЕКТ / НЕ ГОТОВЫЙ САЙТ', noticeTitle: 'Здесь показан подход, не итог.', noticeCopy: 'TEAM KKLE — демонстрация моих навыков, а не готовый сайт клуба. Впереди большая работа: реальные игроки, история, контент и функции. Визуал и структуру настрою под конкретную команду и её требования; этот пример не стоит считать финальным ориентиром.',
     designEyebrow: 'ВИЗУАЛЬНЫЕ ФОРМАТЫ', graphicsTitle: 'Дизайн для каждого момента.', graphicsIntro: 'Четыре примера подачи: анонс, итог матча, драфт и история игрока. Это не фиксированный пакет — под реальную команду содержание и визуальный язык создаются отдельно.',
@@ -17,7 +17,7 @@ const copy = {
     footerEyebrow: 'ЕСТЬ КОМАНДА И ЗАДАЧА?', footerDisclosure: 'TEAM KKLE показывает мой подход, а не готовое решение. Расскажите о вашей команде — соберём визуал под её характер, аудиторию и задачи.'
   },
   en: {
-    navHome: 'Home', navDesign: 'Design', navRoster: 'Roster', navAbout: 'About', navPartners: 'Partners',
+    navHome: 'Home', navDesign: 'Design', navRoster: 'Roster', navAbout: 'About', navPartners: 'Partners', backPortfolio: '← Portfolio',
     heroPre: 'Every team starts with character.', heroSummary: 'Match, roster, draft and player story — one recognisable team voice.', viewDesign: 'Explore design', heroDisclaimer: 'A skills showcase / developed for a specific team',
     noticeLabel: 'DEMO PROJECT / NOT A FINISHED SITE', noticeTitle: 'An approach, not the final result.', noticeCopy: 'TEAM KKLE demonstrates my skills, not a finished club website. Much work remains: real players, history, content and features. I would tailor the visuals and structure to a specific team and brief; this example is not a final blueprint.',
     designEyebrow: 'VISUAL FORMATS', graphicsTitle: 'Design for every moment.', graphicsIntro: 'Four examples: match announcement, result, draft and player story. This is not a fixed package — content and visual language for a real team are made from scratch.',
@@ -46,6 +46,18 @@ const tabs = [...document.querySelectorAll('[data-frame]')];
 const panels = [...document.querySelectorAll('[data-panel]')];
 const playerButtons = [...document.querySelectorAll('[data-player]')];
 const localLinks = [...document.querySelectorAll('a[href$=".html"]')];
+const source = new URLSearchParams(location.search).get('from');
+if (source === 'creative' || source === 'main') {
+  sessionStorage.setItem('kklePortfolioSource', source);
+} else if (document.referrer.includes('/creative/')) {
+  sessionStorage.setItem('kklePortfolioSource', 'creative');
+} else if (document.referrer && !document.referrer.includes('/team-kkle/')) {
+  sessionStorage.setItem('kklePortfolioSource', 'main');
+}
+const portfolioBack = document.querySelector('.portfolio-back');
+if (portfolioBack && sessionStorage.getItem('kklePortfolioSource') === 'creative') {
+  portfolioBack.setAttribute('href', '../creative/index.html');
+}
 localLinks.forEach((link) => { link.dataset.baseHref = link.getAttribute('href'); });
 let language = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'ru';
 let activeFrame = 'match';
