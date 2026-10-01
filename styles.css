@@ -59,6 +59,10 @@ nav a[aria-current="page"] { text-decoration: underline; text-decoration-color: 
 .team-preview-label, .team-preview-bottom { font-size: 12px; font-weight: 850; }
 .team-preview-bottom { align-self: flex-end; }
 .work-card-team .work-art { border-bottom: 4px solid #ed4336; }
+.work-card-team:last-child .work-art { border-bottom-color: #ed4336; }
+.creative-page .work-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.creative-page .work-card-team { grid-column: auto; }
+.creative-page .work-card-team .work-art { aspect-ratio: 16 / 9; }
 .work-card { display: block; min-width: 0; overflow: hidden; border: 1px solid rgba(255, 255, 255, .12); border-radius: 7px; background: var(--panel); color: #182022; transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease; }
 a.work-card:hover { border-color: var(--accent); transform: translateY(-5px); box-shadow: 0 24px 42px rgba(0, 0, 0, .3); }
 .work-art { position: relative; overflow: hidden; aspect-ratio: 16 / 9; background: #23282b; isolation: isolate; }
@@ -190,6 +194,7 @@ a.work-card:hover { border-color: var(--accent); transform: translateY(-5px); bo
   .work-section, .sites-page main, .design-gallery, .about-inner, .footer-inner { width: calc(100% - 24px); }
   .work-section { padding-top: 34px; padding-bottom: 70px; }
   .work-grid { grid-template-columns: 1fr; }
+  .creative-page .work-grid { grid-template-columns: 1fr; }
   .work-art { aspect-ratio: 16 / 10; }
   .work-card-team .work-art { aspect-ratio: 16 / 9; }
   .work-card-info { min-height: 138px; padding: 19px; }
