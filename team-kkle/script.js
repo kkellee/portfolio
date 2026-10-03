@@ -47,6 +47,8 @@ const panels = [...document.querySelectorAll('[data-panel]')];
 const playerButtons = [...document.querySelectorAll('[data-player]')];
 const localLinks = [...document.querySelectorAll('a[href$=".html"]')];
 const source = new URLSearchParams(location.search).get('from');
+let portfolioSource = source;
+try {
 if (source === 'creative' || source === 'main') {
   sessionStorage.setItem('kklePortfolioSource', source);
 } else if (document.referrer.includes('/creative/')) {
@@ -54,12 +56,17 @@ if (source === 'creative' || source === 'main') {
 } else if (document.referrer && !document.referrer.includes('/team-kkle/')) {
   sessionStorage.setItem('kklePortfolioSource', 'main');
 }
+portfolioSource = sessionStorage.getItem('kklePortfolioSource');
+} catch (_) { /* Keep explicit return links usable without browser storage. */ }
 const portfolioBack = document.querySelector('.portfolio-back');
-if (portfolioBack && sessionStorage.getItem('kklePortfolioSource') === 'creative') {
+if (portfolioBack && portfolioSource === 'creative') {
   portfolioBack.setAttribute('href', '../creative/index.html');
 }
 localLinks.forEach((link) => { link.dataset.baseHref = link.getAttribute('href'); });
-let language = new URLSearchParams(location.search).get('lang') === 'en' ? 'en' : 'ru';
+let savedLanguage;
+try { savedLanguage = localStorage.getItem('portfolioLanguage'); } catch (_) { /* URL takes precedence. */ }
+const requestedLanguage = new URLSearchParams(location.search).get('lang');
+let language = ['ru', 'en'].includes(requestedLanguage) ? requestedLanguage : savedLanguage === 'en' ? 'en' : 'ru';
 let activeFrame = 'match';
 let activePlayer = playerButtons[0] || null;
 
@@ -91,6 +98,10 @@ function selectPlayer(button) {
 function setLanguage(next) {
   language = next;
   document.documentElement.lang = next;
+  try { localStorage.setItem('portfolioLanguage', next); } catch (_) { /* Links preserve the choice too. */ }
+  const currentUrl = new URL(location.href);
+  currentUrl.searchParams.set('lang', next);
+  try { history.replaceState(null, '', currentUrl); } catch (_) { /* Local file preview. */ }
   document.querySelectorAll('[data-i18n]').forEach((node) => {
     node.textContent = copy[next][node.dataset.i18n];
   });
@@ -98,7 +109,10 @@ function setLanguage(next) {
     button.setAttribute('aria-pressed', String(button.dataset.lang === next));
   });
   localLinks.forEach((link) => {
-    link.setAttribute('href', link.dataset.baseHref + (next === 'en' ? '?lang=en' : ''));
+    const url = new URL(link.dataset.baseHref, location.href);
+    url.searchParams.set('lang', next);
+    if (portfolioSource === 'creative' || portfolioSource === 'main') url.searchParams.set('from', portfolioSource);
+    link.setAttribute('href', link.dataset.baseHref.split(/[?#]/)[0] + url.search + url.hash);
   });
   const title = pageTitles[document.body.dataset.page] || pageTitles.home;
   document.title = `TEAM KKLE — ${title[next === 'ru' ? 0 : 1]}`;
