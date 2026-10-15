@@ -41,12 +41,12 @@
     translate('.hero-actions .button-text', creative ? 'Video thumbnails' : 'Website references');
     translate('.work-section .eyebrow', 'Selected work');
     translate('#work-title', creative ? 'Thumbnails & esports' : 'Websites & design');
-    translate('.work-section .section-heading > p', creative ? 'Nine thumbnail concepts for different stories and a visual identity concept for a Dota 2 team. Each explores an approach that can be developed around a specific brief.' : 'The third-party websites illustrate different project scopes. The thumbnails and TEAM KKLE are visual concepts that show my approach.');
+    translate('.work-section .section-heading > p', creative ? 'Ten thumbnail concepts for different stories and a visual identity concept for a Dota 2 team. Each explores an approach that can be developed around a specific brief.' : 'The third-party websites illustrate different project scopes. The thumbnails and TEAM KKLE are visual concepts that show my approach.');
     translate('.work-card-info > div > span', creative ? ['01 / Video thumbnails', '02 / Esports'] : ['01 / Website references', '02 / Video thumbnails', '03 / Esports']);
     translate('.work-card-info h3', creative ? ['Video thumbnails', 'TEAM KKLE'] : ['Websites built around your needs', 'Video thumbnails', 'TEAM KKLE']);
-    translate('.work-card-info p', creative ? ['Nine visual approaches for different stories and formats.', 'Identity, match graphics and roster presentation for a Dota 2 team.'] : ['Three third-party examples with different scopes, visual approaches and features.', 'Nine visual approaches for different stories and formats.', 'A visual identity concept for a Dota 2 team: a website, match graphics and roster presentation.']);
+    translate('.work-card-info p', creative ? ['Ten visual approaches for different stories and formats.', 'Identity, match graphics and roster presentation for a Dota 2 team.'] : ['Three third-party examples with different scopes, visual approaches and features.', 'Ten visual approaches for different stories and formats.', 'A visual identity concept for a Dota 2 team: a website, match graphics and roster presentation.']);
     translate('.work-card', creative ? ['Explore video thumbnail concepts', 'Explore the TEAM KKLE Dota 2 concept'] : ['Explore third-party website references by project scope', 'Explore video thumbnail concepts', 'Explore the TEAM KKLE Dota 2 concept'], 'aria-label');
-    translate('.work-art img', creative ? ['Thumbnail concept: Night in the House'] : ['Screenshot of the third-party website Atom’s Avenue', 'Thumbnail concept: Night in the House'], 'alt');
+    translate('.work-art img', creative ? ['Thumbnail concept: One Against Five — Juggernaut'] : ['Screenshot of the third-party website Atom’s Avenue', 'Thumbnail concept: One Against Five — Juggernaut'], 'alt');
     translate('.team-preview-bottom', 'TEAM CONCEPT · 2026');
     translate('.about-heading .eyebrow', 'The person behind the projects');
     translate('#about-title', 'About me');
@@ -68,14 +68,15 @@
     translate('#design-title', 'Thumbnails that catch the eye.');
     translate('.design-hero p', 'A thumbnail starts working before anyone reads the video title. I look for one clear idea: who is at the centre, what is happening and why someone would want to watch. Then I build a composition that also reads well on a phone.');
     translate('.design-hero .button-primary', 'Let’s talk thumbnails');
-    translate('.design-gallery .eyebrow', 'Concepts / 09');
+    translate('.design-gallery .eyebrow', 'Concepts / 10');
     translate('#gallery-title', 'Thumbnail concepts');
-    translate('.design-gallery .section-heading > p', 'Nine different stories and ways to catch attention. For your video, we’ll find an idea of its own rather than repeat an existing composition.');
-    translate('.thumbnail-item figcaption span', ['01 / Storytelling', '02 / Adventure', '03 / Gaming', '04 / Entertainment', '05 / Lifestyle', '06 / Gaming story', '07 / Extreme challenge', '08 / GTA 5 RP', '09 / Popular science']);
-    translate('.thumbnail-item figcaption strong', ['Night in the House', 'What’s Underground?', 'Higher FPS?', 'First Day on the Job', 'A Day at the Shelter', 'The Final Round', 'Hold On and It’s Yours!', 'From Zero to Car Tycoon', 'Who Creates Your Dreams?']);
-    translate('.thumbnail-item img', ['Night in the House: a woman by a red door and neighbours in the windows', 'What’s Underground: three explorers opening a hatch in a forest', 'Gaming thumbnail with a presenter, an FPS counter and a character', 'A comedy scene about a first day at work and a burst pipe', 'A presenter playing with puppies at an animal shelter', 'An illustrated gaming thumbnail: a mage facing a knight', 'Contestants with a rope and a red supercar above a stormy sea', 'A character with car keys between an old car and a luxury dealership', 'A fictional presenter with a night-time city growing out of his head'], 'alt');
+    translate('.design-gallery .section-heading > p', 'Ten different stories and ways to catch attention. For your video, we’ll find an idea of its own rather than repeat an existing composition.');
+    translate('.thumbnail-item figcaption span', ['01 / Dota 2', '02 / Storytelling', '03 / Adventure', '04 / Gaming', '05 / Entertainment', '06 / Lifestyle', '07 / Gaming story', '08 / Extreme challenge', '09 / GTA 5 RP', '10 / Popular science']);
+    translate('.thumbnail-item figcaption strong', ['One Against Five', 'Night in the House', 'What’s Underground?', 'Higher FPS?', 'First Day on the Job', 'A Day at the Shelter', 'The Final Round', 'Hold On and It’s Yours!', 'From Zero to Car Tycoon', 'Who Creates Your Dreams?']);
+    translate('.thumbnail-item img', ['Juggernaut in his Arcana, cyan numbers and SF chat messages', 'Night in the House: a woman by a red door and neighbours in the windows', 'What’s Underground: three explorers opening a hatch in a forest', 'Gaming thumbnail with a presenter, an FPS counter and a character', 'A comedy scene about a first day at work and a burst pipe', 'A presenter playing with puppies at an animal shelter', 'An illustrated gaming thumbnail: a mage facing a knight', 'Contestants with a rope and a red supercar above a stormy sea', 'A character with car keys between an old car and a luxury dealership', 'A fictional presenter with a night-time city growing out of his head'], 'alt');
     translate('.thumbnail-item summary', 'Idea and process');
     translate('.thumbnail-item details p', [
+      "A gaming concept about Juggernaut taking on five opponents. The centred hero, cyan numbers and SF reactions build tension, while the short headline establishes the story. The chat is fictional, not a match screenshot.",
       "The aim is to suggest tension immediately: what is happening in this house? Warm windows contrast with a red door to draw attention to the main character, while a short headline adds to the story.",
       "The aim is to spark curiosity: the characters have found something the viewer cannot see yet. The hatch and the light below it anchor the scene, while the headline leaves the answer beyond the thumbnail.",
       "The aim is to introduce a settings test without an overloaded menu screenshot. The presenter’s reaction, an FPS counter and a short headline make the topic clear at a glance.",

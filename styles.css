@@ -71,8 +71,9 @@ a.work-card:hover { border-color: var(--accent); transform: translateY(-5px); bo
 .work-card:first-child .work-art { border-bottom: 4px solid var(--hot); }
 .work-card:last-child .work-art { border-bottom: 4px solid var(--accent); }
 .art-web img { object-position: center top; }
-.art-video { background: #0c0e10; }
-.art-video img { object-fit: cover; }
+.work-art.art-video { aspect-ratio: 16 / 9; background: #0c0e10; }
+.art-video img { object-fit: contain; }
+.work-card:hover .art-video img { transform: none; }
 .work-card-info { display: flex; justify-content: space-between; gap: 16px; min-height: 151px; padding: 24px 25px; }
 .work-card-info > div > span { color: #60696a; font-size: 11px; font-weight: 850; text-transform: uppercase; }
 .work-card-info h3 { margin: 10px 0 7px; font-size: 26px; line-height: 1.14; }
